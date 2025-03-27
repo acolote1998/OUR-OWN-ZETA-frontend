@@ -1,5 +1,6 @@
 import "./App.css";
 import Civilization from "./components/Civilization";
+import ImportantPerson from "./components/ImportantPerson";
 
 function App() {
   const civProprsTest = {
@@ -69,6 +70,10 @@ function App() {
   return (
     <>
       <Civilization {...civProprsTest} />
+      <hr></hr>
+      <h3> Important People Details</h3>
+      <hr></hr>
+      <ImportantPerson></ImportantPerson>
     </>
   );
 }
