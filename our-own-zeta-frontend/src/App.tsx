@@ -2,21 +2,6 @@ import "./App.css";
 import Civilization from "./components/Civilization";
 
 function App() {
-  /*
-  interface Person {
-  age: number;
-  name: string;
-  field: string;
-  discoveries: Map<string, number>;
-  alive: boolean;
-  knowledge: number;
-  lifelog: string[];
-}
-
-type CivilizationProps = {
-  historyLog: string[];
-};
-  */
   const civProprsTest = {
     name: "The Testians",
     age: 50,
@@ -67,7 +52,7 @@ type CivilizationProps = {
             ["Loving", 5],
           ]),
           alive: true,
-          knowledge: 98,
+          knowledge: 104,
           lifelog: [
             "Michaela met Aki",
             "Michaela and Aki are very happy together!",
