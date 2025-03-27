@@ -18,29 +18,56 @@ type CivilizationProps = {
   historyLog: string[];
 };
 
-function Civilization() {
+function Civilization(props: CivilizationProps) {
+  function drawHashMap(mapToDraw: Map<string, number>) {
+    return (
+      <>
+        {[...mapToDraw].map(([key, value], index) => {
+          return (
+            <li key={index}>
+              {key}: {value}
+            </li>
+          );
+        })}
+      </>
+    );
+  }
+  function drawImportantPeople(mapToDraw: Map<string, Person>) {
+    return (
+      <>
+        {[...mapToDraw].map(([key, value], index) => {
+          return (
+            <li key={index}>
+              {key}:{value.field}, Knowledge:{value.knowledge}, Discoveries:
+              {value.discoveries}
+            </li>
+          );
+        })}
+      </>
+    );
+  }
+  function drawHistoryLog(arrayToDraw: string[]) {
+    return (
+      <>
+        {arrayToDraw.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </>
+    );
+  }
   return (
     <div>
-      <h1>Name</h1>
-      <h2>Age: X</h2>
-      <h3>Population: X</h3>
-      <ul>
-        Resources:
-        <li>Example 1</li>
-        <li>Example 2</li>
-      </ul>
-      <ul>
-        Discoveries:
-        <li>Example 1</li>
-        <li>Example 2</li>
-      </ul>
+      <h1>{props.name}</h1>
+      <h2>Age: {props.age}</h2>
+      <h3>Population: {props.population}</h3>
+      <ul>Resources:{drawHashMap(props.resources)}</ul>
+      <ul>Discoveries:{drawHashMap(props.discoveries)}</ul>
       <ul>
         Important Individuals:
-        <li>Individual 1, Knowledge: Discoveries: </li>
-        <li>Individual 2, Knowledge: Discoveries:</li>
+        {drawImportantPeople(props.importantIndividuals)}
       </ul>
       <p>History Log:</p>
-      <textarea>Event 1 Event 2</textarea>
+      {drawHistoryLog(props.historyLog)}
     </div>
   );
 }
