@@ -1,3 +1,23 @@
+interface Person {
+  age: number;
+  name: string;
+  field: string;
+  discoveries: Map<string, number>;
+  alive: boolean;
+  knowledge: number;
+  lifelog: string[];
+}
+
+type CivilizationProps = {
+  name: string;
+  age: number;
+  population: number;
+  resources: Map<string, number>;
+  discoveries: Map<string, number>;
+  importantIndividuals: Map<string, Person>;
+  historyLog: string[];
+};
+
 function Civilization() {
   return (
     <div>
