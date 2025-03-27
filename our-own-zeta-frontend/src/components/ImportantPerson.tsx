@@ -1,16 +1,3 @@
-/*
-    "Buel": {
-        "age": 0,
-        "name": "Buel",
-        "field": "Athlete",
-        "discoveries": {},
-        "alive": true,
-        "knowledge": 0,
-        "lifeLog": [
-            "Buel, a promising athlete was born!"
-        ]
-*/
-
 function ImportantPerson() {
   return (
     <div>
