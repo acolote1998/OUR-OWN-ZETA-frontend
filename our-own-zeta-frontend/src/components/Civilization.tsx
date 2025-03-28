@@ -1,6 +1,7 @@
 import genericImportantPersonPicture from "../assets/images/genericImportantPerson.png";
 import genericDiscoveryPicture from "../assets/images/genericDiscovery.png";
 import genericResourcePicture from "../assets/images/genericResource.png";
+import "./Civilization.css";
 
 interface Person {
   age: number;
@@ -73,7 +74,7 @@ function Civilization(props: CivilizationProps) {
     );
   }
   return (
-    <div>
+    <div className="civilization">
       <h1>{props.name}</h1>
       <h2>Age: {props.age}</h2>
       <h3>Population: {props.population}</h3>
