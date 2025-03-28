@@ -3,6 +3,21 @@ import Civilization from "./components/Civilization";
 import ImportantPerson from "./components/ImportantPerson";
 
 function App() {
+  const importantPersonPropsTest = {
+    name: "Aki",
+    field: "Scientist",
+    age: 27,
+    Knowledge: 98,
+    Discoveries: new Map([
+      ["Bitcoin Trading", 3],
+      ["Martial Arts", 2],
+    ]),
+    lifeLog: [
+      "Aki was born",
+      "Aki discovered Bitcoin Trading 1",
+      "Aki discovered Martial Arts 2",
+    ],
+  };
   const civProprsTest = {
     name: "The Testians",
     age: 50,
