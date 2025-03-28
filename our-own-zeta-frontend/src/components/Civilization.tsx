@@ -1,3 +1,5 @@
+import genericImportantPersonPicture from "../assets/images/genericImportantPerson.png";
+
 interface Person {
   age: number;
   name: string;
@@ -38,6 +40,7 @@ function Civilization(props: CivilizationProps) {
         {[...mapToDraw].map(([key, value], index) => {
           return (
             <li key={index}>
+              <img src={genericImportantPersonPicture}></img>
               {key}:{value.field}, Knowledge:{value.knowledge}, Discoveries:
               {value.discoveries}
             </li>
