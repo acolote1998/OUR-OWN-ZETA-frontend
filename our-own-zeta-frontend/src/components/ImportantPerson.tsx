@@ -1,4 +1,5 @@
 import genericImportantPersonPicture from "../assets/images/genericImportantPerson.png";
+import genericDiscoveryPicture from "../assets/images/genericDiscovery.png";
 
 function ImportantPerson() {
   return (
@@ -10,8 +11,12 @@ function ImportantPerson() {
       <p>Knowledge: 94</p>
       <p>Discoveries:</p>
       <ul>
-        <li>Discovery 1</li>
-        <li>Discovery 2</li>
+        <li>
+          <img src={genericDiscoveryPicture}></img>Discovery 1
+        </li>
+        <li>
+          <img src={genericDiscoveryPicture}></img>Discovery 2
+        </li>
       </ul>
       <p>Life story:</p>
       <ul>
