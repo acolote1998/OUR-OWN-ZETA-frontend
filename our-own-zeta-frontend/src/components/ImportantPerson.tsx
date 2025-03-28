@@ -1,7 +1,27 @@
 import genericImportantPersonPicture from "../assets/images/genericImportantPerson.png";
 import genericDiscoveryPicture from "../assets/images/genericDiscovery.png";
 import "./ImportantPerson.css";
-function ImportantPerson() {
+import athleteFace from "../assets/images/athleteFace.png";
+import scientistFace from "../assets/images/scientistFace.png";
+import doctorFace from "../assets/images/doctorFace.png";
+import artistFace from "../assets/images/artistFace.png";
+
+function ImportantPerson({ field }: { field: string }) {
+  function addFieldImage(field: string) {
+    switch (field) {
+      case "Athlete":
+        return athleteFace;
+      case "Scientist":
+        return scientistFace;
+      case "Doctor":
+        return doctorFace;
+      case "Artist":
+        return artistFace;
+      default:
+        return genericImportantPersonPicture;
+    }
+  }
+
   return (
     <div className="card container">
       <div className="item-6">
@@ -13,7 +33,7 @@ function ImportantPerson() {
         <p>Knowledge: 94</p>
       </div>
       <div className="item-4">
-        <img src={genericImportantPersonPicture}></img>
+        <img src={addFieldImage(field)}></img>
       </div>
       <div className="item-12 cardDiv">
         <span className="subTitle">Discoveries:</span>
