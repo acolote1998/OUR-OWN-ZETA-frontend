@@ -2,6 +2,14 @@
   background-color: lightblue;
   border-radius: 20px;
 }
+.cardDiv {
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+.subTitle {
+  font-weight: 650;
+}
 
 .container {
   display: grid;

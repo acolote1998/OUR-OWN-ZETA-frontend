@@ -15,8 +15,8 @@ function ImportantPerson() {
       <div className="item-4">
         <img src={genericImportantPersonPicture}></img>
       </div>
-      <div className="item-12">
-        <p>Discoveries:</p>
+      <div className="item-12 cardDiv">
+        <span className="subTitle">Discoveries:</span>
         <ul>
           <li>
             <img src={genericDiscoveryPicture}></img>Discovery 1
@@ -26,8 +26,8 @@ function ImportantPerson() {
           </li>
         </ul>
       </div>
-      <div className="item-12">
-        <p>Life story:</p>
+      <div className="item-12 cardDiv">
+        <span className="subTitle">Life story:</span>
         <ul>
           <li>Pepe was born</li>
           <li>Pepe discovered Electricity 1</li>
