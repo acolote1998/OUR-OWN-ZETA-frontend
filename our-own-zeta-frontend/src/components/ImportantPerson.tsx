@@ -6,6 +6,8 @@ import scientistFace from "../assets/images/scientistFace.png";
 import doctorFace from "../assets/images/doctorFace.png";
 import artistFace from "../assets/images/artistFace.png";
 
+//<ImportantPerson {...importantPersonPropsTest} />;
+
 type ImportantPersonProps = {
   name: string;
   field: string;

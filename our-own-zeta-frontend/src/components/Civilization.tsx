@@ -3,6 +3,8 @@ import genericDiscoveryPicture from "../assets/images/genericDiscovery.png";
 import genericResourcePicture from "../assets/images/genericResource.png";
 import "./Civilization.css";
 
+// <Civilization {...civProprsTest} />
+
 interface Person {
   age: number;
   name: string;
