@@ -7,6 +7,9 @@
   border-radius: 10px;
 }
 
+img {
+  border-radius: 20px;
+}
 .subTitle {
   font-weight: 650;
 }
