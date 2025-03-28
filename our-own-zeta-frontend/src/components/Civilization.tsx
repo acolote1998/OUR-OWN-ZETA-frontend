@@ -1,4 +1,6 @@
 import genericImportantPersonPicture from "../assets/images/genericImportantPerson.png";
+import genericDiscoveryPicture from "../assets/images/genericDiscovery.png";
+import genericResourcePicture from "../assets/images/genericResource.png";
 
 interface Person {
   age: number;
@@ -21,12 +23,24 @@ type CivilizationProps = {
 };
 
 function Civilization(props: CivilizationProps) {
-  function drawHashMap(mapToDraw: Map<string, number>) {
+  function drawHashMap(
+    mapToDraw: Map<string, number>,
+    contentOfHashMap: string
+  ) {
     return (
       <>
         {[...mapToDraw].map(([key, value], index) => {
           return (
             <li key={index}>
+              <img
+                src={
+                  contentOfHashMap === "resource"
+                    ? genericResourcePicture
+                    : contentOfHashMap === "discovery"
+                    ? genericDiscoveryPicture
+                    : ""
+                }
+              ></img>
               {key}: {value}
             </li>
           );
@@ -63,8 +77,8 @@ function Civilization(props: CivilizationProps) {
       <h1>{props.name}</h1>
       <h2>Age: {props.age}</h2>
       <h3>Population: {props.population}</h3>
-      <ul>Resources:{drawHashMap(props.resources)}</ul>
-      <ul>Discoveries:{drawHashMap(props.discoveries)}</ul>
+      <ul>Resources:{drawHashMap(props.resources, "resource")}</ul>
+      <ul>Discoveries:{drawHashMap(props.discoveries, "discovery")}</ul>
       <ul>
         Important Individuals:
         {drawImportantPeople(props.importantIndividuals)}
