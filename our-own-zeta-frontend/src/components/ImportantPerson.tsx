@@ -26,7 +26,7 @@ function ImportantPerson({ field }: { field: string }) {
     <div className="card container">
       <div className="item-6">
         <h2>Pepe</h2>
-        <h3>Scientist</h3>
+        <h3>{field}</h3>
       </div>
       <div className="item-2">
         <p>Age: 36</p>
