@@ -78,14 +78,23 @@ function Civilization(props: CivilizationProps) {
       <h1>{props.name}</h1>
       <h2>Age: {props.age}</h2>
       <h3>Population: {props.population}</h3>
-      <ul>Resources:{drawHashMap(props.resources, "resource")}</ul>
-      <ul>Discoveries:{drawHashMap(props.discoveries, "discovery")}</ul>
-      <ul>
-        Important Individuals:
-        {drawImportantPeople(props.importantIndividuals)}
-      </ul>
-      <p>History Log:</p>
-      {drawHistoryLog(props.historyLog)}
+      <hr></hr>
+      <div id="civContent" className="item">
+        <ul>Resources:{drawHashMap(props.resources, "resource")}</ul>
+        <hr></hr>
+        <ul>Discoveries:{drawHashMap(props.discoveries, "discovery")}</ul>
+        <hr></hr>
+
+        <ul>
+          Important Individuals:
+          {drawImportantPeople(props.importantIndividuals)}
+        </ul>
+        <hr></hr>
+        <ul>
+          History Log:
+          {drawHistoryLog(props.historyLog)}
+        </ul>
+      </div>
     </div>
   );
 }

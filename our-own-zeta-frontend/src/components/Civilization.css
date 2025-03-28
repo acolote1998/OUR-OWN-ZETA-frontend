@@ -1,3 +1,7 @@
 .civilization {
   background-color: lightgrey;
 }
+
+.item {
+  text-align: left;
+}
