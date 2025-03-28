@@ -69,7 +69,9 @@ function App() {
   };
   return (
     <>
-      <Civilization {...civProprsTest} />
+      {
+        // <Civilization {...civProprsTest} />
+      }
       <hr></hr>
       <h3> Important People Details</h3>
       <hr></hr>
