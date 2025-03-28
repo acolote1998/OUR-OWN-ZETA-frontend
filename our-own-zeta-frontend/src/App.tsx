@@ -84,9 +84,10 @@ function App() {
   };
   return (
     <>
-      {
+      {/*
+        
         // <Civilization {...civProprsTest} />
-      }
+      
       <hr></hr>
       <h3> Important People Details</h3>
       <hr></hr>
@@ -97,6 +98,7 @@ function App() {
       <ImportantPerson {...importantPersonPropsTest} />
       <hr></hr>
       <ImportantPerson {...importantPersonPropsTest} />
+      */}
     </>
   );
 }
