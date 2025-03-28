@@ -75,7 +75,13 @@ function App() {
       <hr></hr>
       <h3> Important People Details</h3>
       <hr></hr>
-      <ImportantPerson></ImportantPerson>
+      <ImportantPerson field="Artist" />
+      <hr></hr>
+      <ImportantPerson field="Scientist" />
+      <hr></hr>
+      <ImportantPerson field="Doctor" />
+      <hr></hr>
+      <ImportantPerson field="Athlete" />
     </>
   );
 }
