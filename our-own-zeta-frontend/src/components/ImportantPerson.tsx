@@ -6,7 +6,40 @@ import scientistFace from "../assets/images/scientistFace.png";
 import doctorFace from "../assets/images/doctorFace.png";
 import artistFace from "../assets/images/artistFace.png";
 
-function ImportantPerson({ field }: { field: string }) {
+type ImportantPersonProps = {
+  name: string;
+  field: string;
+  age: number;
+  knowledge: number;
+  discoveries: Map<string, number>;
+  lifeLog: string[];
+};
+
+function ImportantPerson(props: ImportantPersonProps) {
+  function drawHashMap(mapToDraw: Map<string, number>) {
+    return (
+      <>
+        {[...mapToDraw].map(([key, value], index) => {
+          return (
+            <li key={index}>
+              <img src={genericDiscoveryPicture}></img>
+              {key}: {value}
+            </li>
+          );
+        })}
+      </>
+    );
+  }
+  function drawHistoryLog(arrayToDraw: string[]) {
+    return (
+      <>
+        {arrayToDraw.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </>
+    );
+  }
+
   function addFieldImage(field: string) {
     switch (field) {
       case "Athlete":
@@ -25,34 +58,23 @@ function ImportantPerson({ field }: { field: string }) {
   return (
     <div className="card container">
       <div className="item-6">
-        <h2>Pepe</h2>
-        <h3>{field}</h3>
+        <h2>{props.name}</h2>
+        <h3>{props.field}</h3>
       </div>
       <div className="item-2">
-        <p>Age: 36</p>
-        <p>Knowledge: 94</p>
+        <p>Age: {props.age}</p>
+        <p>Knowledge: {props.knowledge}</p>
       </div>
       <div className="item-4">
-        <img src={addFieldImage(field)}></img>
+        <img src={addFieldImage(props.field)}></img>
       </div>
       <div className="item-12 cardDiv">
         <span className="subTitle">Discoveries:</span>
-        <ul>
-          <li>
-            <img src={genericDiscoveryPicture}></img>Discovery 1
-          </li>
-          <li>
-            <img src={genericDiscoveryPicture}></img>Discovery 2
-          </li>
-        </ul>
+        <ul>{drawHashMap(props.discoveries)}</ul>
       </div>
       <div className="item-12 cardDiv">
         <span className="subTitle">Life story:</span>
-        <ul>
-          <li>Pepe was born</li>
-          <li>Pepe discovered Electricity 1</li>
-          <li>Pepe started studying programming at {"</salt>"}</li>
-        </ul>
+        <ul>{drawHistoryLog(props.lifeLog)}</ul>
       </div>
     </div>
   );
