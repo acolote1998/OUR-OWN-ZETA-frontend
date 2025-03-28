@@ -7,8 +7,8 @@ function App() {
     name: "Aki",
     field: "Scientist",
     age: 27,
-    Knowledge: 98,
-    Discoveries: new Map([
+    knowledge: 98,
+    discoveries: new Map([
       ["Bitcoin Trading", 3],
       ["Martial Arts", 2],
     ]),
@@ -90,13 +90,13 @@ function App() {
       <hr></hr>
       <h3> Important People Details</h3>
       <hr></hr>
-      <ImportantPerson field="Artist" />
+      <ImportantPerson {...importantPersonPropsTest} />
       <hr></hr>
-      <ImportantPerson field="Scientist" />
+      <ImportantPerson {...importantPersonPropsTest} />
       <hr></hr>
-      <ImportantPerson field="Doctor" />
+      <ImportantPerson {...importantPersonPropsTest} />
       <hr></hr>
-      <ImportantPerson field="Athlete" />
+      <ImportantPerson {...importantPersonPropsTest} />
     </>
   );
 }
