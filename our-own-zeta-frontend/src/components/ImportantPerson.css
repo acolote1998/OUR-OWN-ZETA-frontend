@@ -2,3 +2,25 @@
   background-color: lightblue;
   border-radius: 20px;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 equal columns */
+  gap: 5px; /* Space between items */
+}
+
+.item-12 {
+  grid-column: span 12; /* This item takes up 2 columns */
+}
+
+.item-6 {
+  grid-column: span 6; /* This item takes up 2 columns */
+}
+
+.item-2 {
+  grid-column: span 2; /* This item takes up 2 columns */
+}
+
+.item-4 {
+  grid-column: span 4; /* This item takes up 4 columns */
+}

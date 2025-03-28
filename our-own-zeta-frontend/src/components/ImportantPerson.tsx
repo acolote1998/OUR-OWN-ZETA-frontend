@@ -3,27 +3,37 @@ import genericDiscoveryPicture from "../assets/images/genericDiscovery.png";
 import "./ImportantPerson.css";
 function ImportantPerson() {
   return (
-    <div className="card">
-      <h2>Name: Pepe</h2>
-      <h3>Scientist</h3>
-      <img src={genericImportantPersonPicture}></img>
-      <p>Age: 36</p>
-      <p>Knowledge: 94</p>
-      <p>Discoveries:</p>
-      <ul>
-        <li>
-          <img src={genericDiscoveryPicture}></img>Discovery 1
-        </li>
-        <li>
-          <img src={genericDiscoveryPicture}></img>Discovery 2
-        </li>
-      </ul>
-      <p>Life story:</p>
-      <ul>
-        <li>Pepe was born</li>
-        <li>Pepe discovered Electricity 1</li>
-        <li>Pepe started studying programming at {"</salt>"}</li>
-      </ul>
+    <div className="card container">
+      <div className="item-6">
+        <h2>Pepe</h2>
+        <h3>Scientist</h3>
+      </div>
+      <div className="item-2">
+        <p>Age: 36</p>
+        <p>Knowledge: 94</p>
+      </div>
+      <div className="item-4">
+        <img src={genericImportantPersonPicture}></img>
+      </div>
+      <div className="item-12">
+        <p>Discoveries:</p>
+        <ul>
+          <li>
+            <img src={genericDiscoveryPicture}></img>Discovery 1
+          </li>
+          <li>
+            <img src={genericDiscoveryPicture}></img>Discovery 2
+          </li>
+        </ul>
+      </div>
+      <div className="item-12">
+        <p>Life story:</p>
+        <ul>
+          <li>Pepe was born</li>
+          <li>Pepe discovered Electricity 1</li>
+          <li>Pepe started studying programming at {"</salt>"}</li>
+        </ul>
+      </div>
     </div>
   );
 }
