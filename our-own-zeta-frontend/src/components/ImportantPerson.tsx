@@ -1,9 +1,9 @@
 import genericImportantPersonPicture from "../assets/images/genericImportantPerson.png";
 import genericDiscoveryPicture from "../assets/images/genericDiscovery.png";
-
+import "./ImportantPerson.css";
 function ImportantPerson() {
   return (
-    <div>
+    <div className="card">
       <h2>Name: Pepe</h2>
       <h3>Scientist</h3>
       <img src={genericImportantPersonPicture}></img>
