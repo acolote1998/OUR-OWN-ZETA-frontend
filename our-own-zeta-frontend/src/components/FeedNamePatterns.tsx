@@ -28,7 +28,8 @@ function FeedingNamePatterns() {
 
   return (
     <div>
-      <h2>Your Civilization language</h2>
+      <h1>Our Own Zeta</h1>
+      <h2>Civilization language</h2>
       <p>
         Our Own Zeta uses algorithms to break down the names of your
         civilization into small patterns that can help create new names for the
@@ -37,8 +38,8 @@ function FeedingNamePatterns() {
         will be born in it.
       </p>
       <p>
-        You can either choose a preset of words from the list below, otherwise
-        please use the text area to write your own words, separated by a coma
+        You can either choose a preset of words, otherwise you can provide your
+        own words for your language.
       </p>
       <label>
         <input
@@ -74,7 +75,16 @@ function FeedingNamePatterns() {
         </>
       )}
       {languageButton == "inputLanguage" && (
-        <textarea placeholder="USING OWN WORDS"></textarea>
+        <>
+          <p>
+            You can write your own words. The algorith will process the language
+            pattern and use it to generate similar structured words to the ones
+            you are providing. The more amount of words you provide, the more
+            accurate the algorithm will be.
+          </p>
+          <p>Please write your words separated by a comma</p>
+          <textarea placeholder="USING OWN WORDS"></textarea>
+        </>
       )}
 
       {error && <p style={{ color: "red" }}>Error: {error}</p>}
