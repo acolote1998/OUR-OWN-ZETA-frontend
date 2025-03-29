@@ -28,22 +28,23 @@ function FeedingNamePatterns() {
 
   function validateWordsInput(content: string): string {
     let response: string = "";
-    let responseCharArray: string[] = content.split(",");
-    let abc: string[] = "abcdefghijklmnopqrstuvwxyz".split("");
+    let responseCharArray: string[] = content.replace(/\s+/g, "").split(",");
+    let abc: string[] = "abcdefghijklmnopqrstuvwxyz ,".split("");
+    console.log(responseCharArray);
+
     for (let i = 0; i < responseCharArray.length; i++) {
-      let counter = 0;
-      for (let j = 0; j < abc.length; j++) {
-        if (responseCharArray[i] == abc[j] && responseCharArray[i] == " ") {
-          counter++;
+      // Comprobar si el caracter está vacío o si contiene algo que no es una letra
+      for (let char of responseCharArray[i].trim()) {
+        if (!abc.includes(char.toLowerCase())) {
+          response = "Please use only letters. Words separated by commas.";
+          console.log(response);
+          return response; // Salir inmediatamente si encontramos un error
         }
-        if (j == abc.length && counter == abc.length - 1) {
-          response = "Please use only letters. Words separated by commas";
-        }
-      }
-      if (response == "") {
-        response = "All good!";
       }
     }
+
+    // Si todo es correcto
+    response = "All good!";
     console.log(response);
     return response;
   }
@@ -105,7 +106,18 @@ function FeedingNamePatterns() {
             relevant the generated names will be.
           </p>
           <p>Please enter your words separated by commas</p>
-          <textarea placeholder="USING OWN WORDS"></textarea>
+          <textarea id="inputWords" placeholder="USING OWN WORDS"></textarea>
+          <br></br>
+          <button
+            onClick={() =>
+              validateWordsInput(
+                (document.getElementById("inputWords") as HTMLTextAreaElement)
+                  ?.value
+              )
+            }
+          >
+            Submit
+          </button>
         </>
       )}
 
