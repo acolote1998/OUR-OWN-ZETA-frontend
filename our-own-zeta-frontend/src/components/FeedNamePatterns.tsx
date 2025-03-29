@@ -31,15 +31,15 @@ function FeedingNamePatterns() {
       <h1>Our Own Zeta</h1>
       <h2>Civilization language</h2>
       <p>
-        Our Own Zeta uses algorithms to break down the names of your
-        civilization into small patterns that can help create new names for the
-        future of your Civilization. This patterns are used to, for example,
-        generate a unique name for your Civilization and the future people who
-        will be born in it.
+        Our Own Zeta utilizes algorithms to analyze the names of your
+        civilization and break them down into small, meaningful patterns. These
+        patterns are then used to generate new names for your civilization and
+        its future inhabitants. For example, they can help create a unique name
+        for your civilization and the people who will be born within it.
       </p>
       <p>
-        You can either choose a preset of words, otherwise you can provide your
-        own words for your language.
+        You can either select a language pattern from a preset list or provide
+        your own custom words for the language.
       </p>
       <label>
         <input
@@ -77,12 +77,12 @@ function FeedingNamePatterns() {
       {languageButton == "inputLanguage" && (
         <>
           <p>
-            You can write your own words. The algorith will process the language
-            pattern and use it to generate similar structured words to the ones
-            you are providing. The more amount of words you provide, the more
-            accurate the algorithm will be.
+            You can enter your own words, and the algorithm will process the
+            language patterns to generate words with a similar structure to
+            those you provide. The more words you input, the more accurate and
+            relevant the generated names will be.
           </p>
-          <p>Please write your words separated by a comma</p>
+          <p>Please enter your words separated by commas</p>
           <textarea placeholder="USING OWN WORDS"></textarea>
         </>
       )}
