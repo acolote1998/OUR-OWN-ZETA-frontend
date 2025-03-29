@@ -60,9 +60,18 @@ function FeedingNamePatterns() {
       <br></br>
       <br></br>
       {languageButton == "preset" && (
-        <select>
-          <option>USING PRESET</option>
-        </select>
+        <>
+          <p>Please choose a language from the list below</p>
+          <select>
+            <option>Orc</option>
+            <option>Dwarf</option>
+            <option>Elf</option>
+            <option>Human</option>
+            <option>Oriental Warrior</option>
+            <option>Murlock</option>
+            <option>Ogre</option>
+          </select>
+        </>
       )}
       {languageButton == "inputLanguage" && (
         <textarea placeholder="USING OWN WORDS"></textarea>
