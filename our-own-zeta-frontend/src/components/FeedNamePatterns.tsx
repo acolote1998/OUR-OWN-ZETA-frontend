@@ -26,6 +26,28 @@ function FeedingNamePatterns() {
     setLanguageButton(content);
   }
 
+  function validateWordsInput(content: string): string {
+    let response: string = "";
+    let responseCharArray: string[] = content.split(",");
+    let abc: string[] = "abcdefghijklmnopqrstuvwxyz".split("");
+    for (let i = 0; i < responseCharArray.length; i++) {
+      let counter = 0;
+      for (let j = 0; j < abc.length; j++) {
+        if (responseCharArray[i] == abc[j] && responseCharArray[i] == " ") {
+          counter++;
+        }
+        if (j == abc.length && counter == abc.length - 1) {
+          response = "Please use only letters. Words separated by commas";
+        }
+      }
+      if (response == "") {
+        response = "All good!";
+      }
+    }
+    console.log(response);
+    return response;
+  }
+
   return (
     <div>
       <h1>Our Own Zeta</h1>
