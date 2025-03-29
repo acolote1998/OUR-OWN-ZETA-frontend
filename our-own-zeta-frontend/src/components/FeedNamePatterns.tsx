@@ -4,6 +4,7 @@ import { feedingLanguagePatterns } from "../services/civilizations";
 function FeedingNamePatterns() {
   const [responseData, setResponseData] = useState(null);
   const [error, setError] = useState<string | null>(null);
+  const [languageButton, setLanguageButton] = useState("");
 
   useEffect(() => {
     // Llamamos a fetchData() solo una vez cuando el componente se monta
@@ -21,6 +22,10 @@ function FeedingNamePatterns() {
     fetchData(); // Llamamos la función para obtener datos de la API
   }, []); // Dependencia vacía para que se ejecute solo una vez al montar el componente
 
+  function updateButtonContent(content: string) {
+    setLanguageButton(content);
+  }
+
   return (
     <div>
       <h2>Your Civilization language</h2>
@@ -36,16 +41,33 @@ function FeedingNamePatterns() {
         please use the text area to write your own words, separated by a coma
       </p>
       <label>
-        <input type="radio" name="language" /> Use a preset language
+        <input
+          onChange={() => updateButtonContent("preset")}
+          type="radio"
+          name="language"
+        />{" "}
+        Use a preset language
       </label>
       <br></br>
       <label>
-        <input type="radio" name="language" /> I want to use my own words for
-        the language
+        <input
+          onChange={() => updateButtonContent("inputLanguage")}
+          type="radio"
+          name="language"
+        />
+        I want to use my own words for the language
       </label>
-      <select>
-        <option>asd</option>
-      </select>
+      <br></br>
+      <br></br>
+      {languageButton == "preset" && (
+        <select>
+          <option>USING PRESET</option>
+        </select>
+      )}
+      {languageButton == "inputLanguage" && (
+        <textarea placeholder="USING OWN WORDS"></textarea>
+      )}
+
       {error && <p style={{ color: "red" }}>Error: {error}</p>}
       {responseData ? (
         <pre>{JSON.stringify(responseData, null, 2)}</pre> // Mostramos la respuesta de la API
