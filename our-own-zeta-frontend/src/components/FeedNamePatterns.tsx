@@ -23,8 +23,29 @@ function FeedingNamePatterns() {
 
   return (
     <div>
-      <h1></h1>
-
+      <h2>Your Civilization language</h2>
+      <p>
+        Our Own Zeta uses algorithms to break down the names of your
+        civilization into small patterns that can help create new names for the
+        future of your Civilization. This patterns are used to, for example,
+        generate a unique name for your Civilization and the future people who
+        will be born in it.
+      </p>
+      <p>
+        You can either choose a preset of words from the list below, otherwise
+        please use the text area to write your own words, separated by a coma
+      </p>
+      <label>
+        <input type="radio" name="language" /> Use a preset language
+      </label>
+      <br></br>
+      <label>
+        <input type="radio" name="language" /> I want to use my own words for
+        the language
+      </label>
+      <select>
+        <option>asd</option>
+      </select>
       {error && <p style={{ color: "red" }}>Error: {error}</p>}
       {responseData ? (
         <pre>{JSON.stringify(responseData, null, 2)}</pre> // Mostramos la respuesta de la API
